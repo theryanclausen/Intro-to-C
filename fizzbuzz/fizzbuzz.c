@@ -8,9 +8,51 @@
     every time that nothing gets printed and return the counter.
     Don't forget to include newlines '\n' in your printf statements!
 */
+// int fizzbuzz(int n)
+// {
+//  int i;
+//  int counter = 0;
+//  for(i=1; i <= n; i++)
+//  {
+//  if(!(i%3) && !(i%5))
+//  {
+//      printf("FizzBuzz\n");
+//  }
+// if(!(i%3))
+//  {
+//      printf("Fizz\n");
+//  }
+// if(!(i%5))
+//  {
+//      printf("Buzz\n");
+//  }
+//  else
+//  {
+//      counter = counter + 1;
+//  }
+//  }
+//  return counter;
+// }
+
 int fizzbuzz(int n)
 {
+  int i;
+  int counter = 0;
 
+  for( i = 1; i <= n; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      if (i % 3 == 0) {
+        printf("Fizz");
+      }
+      if (i % 5 == 0) {
+        printf("Buzz");
+      }
+      printf("\n");
+      } else {
+        counter++;
+      }
+  }
+  return counter;
 }
 
 #ifndef TESTING
