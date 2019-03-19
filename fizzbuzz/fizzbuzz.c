@@ -18,23 +18,21 @@ int fizzbuzz(int n)
  {
      printf("FizzBuzz\n");
  }
-if(!(i%3))
+else if(!(i%3))
  {
      printf("Fizz\n");
  }
-if(!(i%5))
+else if(!(i%5))
  {
      printf("Buzz\n");
  }
  else
  {
-     counter = counter + 1;
+     counter++;
  }
  }
  return counter;
 }
-
-
 
 #ifndef TESTING
 int main(void)
