@@ -6,11 +6,22 @@
     held inside it.
     
     Do not just use the `strlen` function from the standard libary.
+
 */
+
 int string_length(char s[])
 {
-
+    int counter = 0;
+    char letter = s[0];
+    while(letter != '\0')
+    {
+        counter++;
+        letter = s[counter];
+    }
+    return counter;
 }
+
+
 
 /*
     Write a function that reverses the order of string s and outputs 
@@ -20,7 +31,15 @@ int string_length(char s[])
 */
 char *reverse_string(char rv[], char s[])
 {
+    int slen = string_length(s);
+    int i;
+    for (i = 0; i < slen; i++)
+    {
+        rv[slen - i - 1] = s[i];
+    }
+    rv[i] = '\0';
 
+    return rv;
 }
 
 #ifndef TESTING
